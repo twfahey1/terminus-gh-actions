@@ -14,6 +14,7 @@ This project serves largely 2 purposes:
 
 - Assuming you've forked this repository, setup the following secrets:
 PANTHEON_MACHINE_TOKEN: A Pantheon Machine Token - To set one up, go to https://pantheon.io/docs/machine-tokens
+- Some commands require an SSH key to be setup - You can generate one with a site like https://8gwifi.org/sshfunctions.jsp, add the *Private* key as a secret called PANTHEON_SSH_KEY, and add the *Public* key to your account per https://pantheon.io/docs/ssh-keys.
 
 # Usage
 
