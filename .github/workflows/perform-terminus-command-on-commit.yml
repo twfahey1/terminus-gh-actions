@@ -8,11 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - run: |
+        known_hosts=cat known_hosts
+        echo "::set-env name=known_hosts::$known_hosts"
+        ssh_config=cat ssh_config
+        echo "::set-env name=SSH_CONFIG::$ssh_config"
     - uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.PANTHEON_SSH_KEY }}
-        config: ${{ secrets.SSH_CONFIG }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
+        config: ${{ env.SSH_CONFIG }}
+        known_hosts: ${{ env.KNOWN_HOSTS }}
     - name: Installing Terminus
       uses: kopepasah/setup-pantheon-terminus@master
       with:
