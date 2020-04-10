@@ -10,8 +10,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: deployer
       run: |
-        known_hosts=cat known_hosts
-        echo "::set-env name=known_hosts::$known_hosts"
+        echo "::set-env name=known_hosts::$(cat known_hosts)"
         ssh_config=cat ssh_config
         echo "::set-env name=SSH_CONFIG::$ssh_config"
     - uses: shimataro/ssh-key-action@v2
