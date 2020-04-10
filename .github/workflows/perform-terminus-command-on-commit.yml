@@ -11,8 +11,7 @@ jobs:
     - name: deployer
       run: |
         echo "::set-env name=known_hosts::$(cat known_hosts)"
-        ssh_config=cat ssh_config
-        echo "::set-env name=SSH_CONFIG::$ssh_config"
+        echo "::set-env name=SSH_CONFIG::$(cat ssh_config)"
     - uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.PANTHEON_SSH_KEY }}
