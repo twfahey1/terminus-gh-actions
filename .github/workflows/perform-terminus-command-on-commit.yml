@@ -1,4 +1,4 @@
-name: Deploy Master to Pantheon
+name: Run Terminus Command
 on:
   push:
     branches:
