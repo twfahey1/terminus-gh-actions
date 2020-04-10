@@ -3,7 +3,7 @@ A proof of concept for running an arbitrary terminus command via GitHub actions.
 
 # Overview
 
-The idea is that using GitHub actions, you can have a file called "command.txt", and it will run whatever command is on line 1 of this file against a specified site. You can put any terminus command. For example, to change the site upstream, you could put:
+The idea is that using GitHub actions, you can have a file called "commands.txt", and it will run whatever commands are in this file. Terminus is automatically setup on the container, so you can run any terminus command against sites you control.
 
 This project serves largely 2 purposes:
 
@@ -20,3 +20,7 @@ PANTHEON_MACHINE_TOKEN: A Pantheon Machine Token - To set one up, go to https://
 
 - Commit changes to the "command.txt" file, and the pre-defined GitHub action will act on the contents of the file. The action file is defined in .github/workflows/perform-terminus-command-on-commit.yml. The logic here starts up a GitHub action whenever a commit is made, and it assumes you want to execute whatever command is in the "command.txt" file.
 - TODO: Add instructions / overview on committing through the GitHub UI.
+
+# Security
+
+- Simply remove the SSH key from your Pantheon and/or GitHub Secrets as needed. Same goes for the machine token. You can always re-create them, and add back as needed.
