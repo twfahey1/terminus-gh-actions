@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: |
+    - name: deployer
+      run: |
         known_hosts=cat known_hosts
         echo "::set-env name=known_hosts::$known_hosts"
         ssh_config=cat ssh_config
