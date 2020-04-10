@@ -1,1 +1,2 @@
 terminus drush tylerfaheycom.dev -- cr
+terminus drush tylerfaheycom.dev -- status
