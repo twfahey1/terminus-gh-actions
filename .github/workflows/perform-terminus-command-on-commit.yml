@@ -21,10 +21,7 @@ jobs:
       uses: kopepasah/setup-pantheon-terminus@master
       with:
         pantheon-machine-token: ${{ secrets.PANTHEON_MACHINE_TOKEN }}
-    - name: deployer
-      env:
-        pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
-        pantheon_site_name: '${{ secrets.PANTHEON_SITE_NAME }}'
+    - name: Running command
       run: |
         input="commands.txt"
         while IFS= read -r line
