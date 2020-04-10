@@ -18,7 +18,7 @@ PANTHEON_MACHINE_TOKEN: A Pantheon Machine Token - To set one up, go to https://
 
 # Usage
 
-- Commit changes to the "command.txt" file, and the pre-defined GitHub action will act on the contents of the file. The action file is defined in .github/workflows/perform-terminus-command-on-commit.yml. The logic here starts up a GitHub action whenever a commit is made, and it assumes you want to execute whatever command is in the "command.txt" file.
+- Commit changes to the "commands.txt" file, and the pre-defined GitHub action will act on the contents of the file. The action file is defined in .github/workflows/perform-terminus-command-on-commit.yml. The logic here starts up a GitHub action whenever a commit is made, and it assumes you want to execute whatever command is in the "command.txt" file.
 - TODO: Add instructions / overview on committing through the GitHub UI.
 
 # Security
